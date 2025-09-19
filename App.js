@@ -10,7 +10,7 @@ import './styles.css'; // Import the CSS file
 // Register all necessary components
 Chart.register(...registerables);
 
-const Home = () => {
+const App = () => {
   // State variables
   const [clients, setClients] = useState([]);
   const [newClient, setNewClient] = useState({
@@ -914,4 +914,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default App;
