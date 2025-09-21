@@ -1,0 +1,519 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /*  background */
+  animation: backgroundAnimation 15s ease infinite alternate;
+  height: 100vh; /*  height */
+  display: flex; /* xbox for layout */
+  justify-content: center; /* Center y */
+  align-items: flex-start; /* Aligning items to the top */
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+  50% {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /*  gradient */
+  }
+  100% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+}
+
+
+
+
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+}
+
+button {
+  background: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; 
+}
+
+button:hover {
+  background: #0056b3; 
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+  50% {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Change to a different gradient */
+  }
+  100% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 1); /* Full white on hover */
+}
+
+
+.header {
+  background-color: #007bff; 
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.header:hover {
+  background-color: #0056b3; 
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.header nav ul li {
+  margin-right: 20px; 
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s; 
+}
+
+.header nav ul li a:hover {
+  color: #ffdd57; 
+  transform: scale(1.1); 
+}
+
+
+.dashboard {
+  margin-top: 20px;
+  background: white; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.dashboard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.dashboard-section {
+  margin-bottom: 20px; 
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px; 
+}
+
+.stat {
+  background: #f8f9fa; 
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth scaling and shadow on hover */
+}
+
+.stat:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow  */
+}
+
+/* Button Styles */
+button {
+  background: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0. 3s; /* Added box-shadow transition */
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Form Styles */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+/* Communication Model */
+.communication-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  transition: transform 0.3s ease; 
+}
+
+.communication-modal.show {
+  transform: translate(-50%, -50%) scale(1.05); 
+}
+
+/* Client List and Communication Status */
+.client-list, .communication-status {
+  margin-top: 20px;
+}
+
+.client, .communication-status-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.client:hover, .communication-status-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+  background-color: #f1f1f1; 
+}
+
+/* Notification Badge */
+.notification-badge {
+  cursor: pointer;
+  background-color: #ffc107;
+  color: #333; 
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+.notification-badge:hover {
+  background-color: #e0a800;
+  transform: scale(1.05); 
+}
+
+/* Performance Report */
+.performance-report {
+  background-color: #dcdceb; 
+  border: 1px solid #0d22de; 
+  border-radius: 8px; 
+  padding: 20px; 
+  margin: 20px 0; 
+  box-shadow: 0 2px 5px rgba(13, 43, 214, 0.1); 
+  transition: background-color 0.3s ease; 
+}
+
+.performance-report:hover {
+  background-color: #e7e7f0; 
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb); 
+  color: #fff;
+  border-radius: 0 0 15px 15px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease; 
+}
+
+.footer:hover {
+  background: linear-gradient(135deg, #6a11cb, #2575fc); 
+}
+
+.footer a {
+  color: #ffeb3b; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease; 
+}
+
+.footer a:hover {
+  text-decoration: underline; 
+  color: #fff; 
+}
+/* Header Styles */
+.header {
+  background-color: #007bff; 
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; 
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.header nav ul li {
+  margin-right: 20px; 
+  position: relative; 
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  padding: 5px 0;
+}
+
+.header nav ul li a:hover {
+  color: #f9f9f9; 
+}
+
+/* Underline effect */
+.header nav ul li::after {
+  content: ''; 
+  position: absolute; 
+  left: 0; 
+  bottom: -5px;
+  height: 2px; 
+  width: 100%; 
+  background-color: white; 
+  transform: scaleX(0); 
+  transition: transform 0.3s ease; 
+}
+
+.header nav ul li:hover::after {
+  transform: scaleX(1); 
+}
+@keyframes backgroundAnimation {
+  0% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+  50% {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); 
+  }
+  100% {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  }
+}
+
+/* Container Styles */
+.container {
+  max-width: 1200px;
+  margin: auto; 
+  padding: 20px;
+}
+
+/* Dashboard Styles */
+.dashboard {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px; 
+}
+
+/* Dashboard Section */
+.dashboard-section {
+  margin-bottom: 20px; 
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px; 
+}
+
+/* Stat Card */
+.stat {
+  background: #f8f9fa; 
+  padding: 15px; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.stat:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Button Styles */
+button {
+  background: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; 
+}
+
+button:hover {
+  background: #0056b3; 
+  transform: translateY(-2px); 
+}
+
+/* Form Styles */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+/* Communication Modal */
+.communication-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+/* Client List and Communication Status */
+.client-list, .communication-status {
+  margin-top: 20px;
+}
+
+.client, .communication-status-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background: #fff;
+  transition: transform 0.2;
+}
+/* Button Styles */
+button {
+  background: #007bff; 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; 
+  margin-right: 10px; 
+}
+
+button:hover {
+  background: #0056b3; 
+  transform: translateY(-2px); 
+}
+/* Performance Report */
+.performance-report {
+  background-color: #dcdceb; 
+  border: 1px solid #0d22de; 
+  border-radius: 8px; 
+  padding: 20px;
+  margin: 20px 0; 
+  box-shadow: 0 2px 5px rgba(13, 43, 214, 0.1); 
+  transition: background-color 0.3s ease; 
+}
+
+/* Performance Report Headings */
+.performance-report h2 {
+  margin-bottom: 15px; 
+  font-size: 1.5em; 
+  color: #333; 
+}
+
+/* Performance Report Stats */
+.performance-report p {
+  margin: 10px 0; 
+  font-size: 1.2em; 
+  color: #555; 
+  text-align: center; 
+}
+.stat {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+}
+/* Auth Section Styles */
+.auth-section {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  width: 300px; 
+  text-align: center; 
+}
+.header {
+  display: flex;
+  align-items: center; 
+  padding: 10px; 
+}
+
+#logo {
+  width: 150px; 
+  height: 150px; 
+  margin-left: 1020px; 
+  margin-top: -70px;
+  z-index: 2;
+}
