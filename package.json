@@ -23,14 +23,26 @@
     "rollup-plugin-terser": "npm:@rollup/plugin-terser@^0.4.4",
     "q": "npm:es6-promise@^4.2.8",
     "inflight": "npm:inflight@^1.0.6",
-    "glob": "npm:glob@^10.3.0"
+    "glob": "npm:glob@^10.3.0",
+    "workbox-cacheable-response": "npm:workbox-cacheable-response@^7.0.0",
+    "workbox-google-analytics": "npm:workbox-google-analytics@^7.0.0"
+  },
+  "resolutions": {
+    "w3c-hr-time": "^1.0.2",
+    "stable": "^0.1.8",
+    "sourcemap-codec": "^1.4.8",
+    "rimraf": "^5.0.0",
+    "rollup-plugin-terser": "^0.4.4",
+    "q": "^1.5.1",
+    "inflight": "^1.0.6",
+    "glob": "^10.3.0"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm_config_warn=false react-scripts build",
+    "build": "npm_config_warn=false npm_config_audit=false npm_config_fund=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
