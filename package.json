@@ -42,7 +42,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm_config_warn=false npm_config_audit=false npm_config_fund=false react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
