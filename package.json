@@ -15,12 +15,22 @@
     "axios": "^1.7.9",
     "web-vitals": "^3.5.0"
   },
+  "overrides": {
+    "w3c-hr-time": "npm:@types/w3c-hr-time@^1.0.0",
+    "stable": "npm:array.prototype.flat@^1.2.5",
+    "sourcemap-codec": "npm:@jridgewell/sourcemap-codec@^1.4.15",
+    "rimraf": "npm:rimraf@^5.0.0",
+    "rollup-plugin-terser": "npm:@rollup/plugin-terser@^0.4.4",
+    "q": "npm:es6-promise@^4.2.8",
+    "inflight": "npm:inflight@^1.0.6",
+    "glob": "npm:glob@^10.3.0"
+  },
   "devDependencies": {
     "gh-pages": "^6.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm_config_warn=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

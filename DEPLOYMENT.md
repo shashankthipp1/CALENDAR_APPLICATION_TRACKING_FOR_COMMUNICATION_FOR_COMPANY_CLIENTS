@@ -63,6 +63,26 @@ npm run deploy
 - Check build output for errors
 - Ensure all required files are present
 
+### NPM Warnings (Common)
+If you see deprecation warnings like:
+```
+npm warn deprecated w3c-hr-time@1.0.2
+npm warn deprecated stable@0.1.8
+npm warn deprecated sourcemap-codec@1.4.8
+```
+
+**These are normal and won't break your deployment!** They're just warnings about outdated packages that still work fine.
+
+To reduce warnings:
+1. The project includes `package.json` overrides for modern alternatives
+2. `.npmrc` file suppresses warning output
+3. Build script includes warning suppression
+
+### Build Timeout Issues
+- Usually resolves on retry
+- Check Vercel dashboard for detailed logs
+- Ensure build completes within 15 minutes
+
 ## 📱 Testing After Deployment
 
 1. Test all major features
